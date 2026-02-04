@@ -34,7 +34,7 @@ android {
     ndkVersion '28.1.13356709'
 
     defaultConfig {
-        applicationId "app.tankste"
+        applicationId "app.tankste.fdroid"
 
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 36
