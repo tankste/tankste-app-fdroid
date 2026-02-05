@@ -33,6 +33,14 @@ android {
     compileSdkVersion 36
     ndkVersion '28.1.13356709'
 
+    packagingOptions {
+        doNotStrip '**/*.so'
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
     defaultConfig {
         applicationId "app.tankste.fdroid"
 
@@ -45,8 +53,8 @@ android {
 
     buildTypes {
         release {
-            shrinkResources true
-            minifyEnabled true
+            shrinkResources false
+            minifyEnabled false
 
             ndk {
                 debugSymbolLevel 'SYMBOL_TABLE'
