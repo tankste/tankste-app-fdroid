@@ -83,5 +83,8 @@ dependencies {
 }
 
 configurations.implementation {
-    exclude group: 'com.google.android.gms'
+    // Flutter is adding play framework by default x.x
+    // Remove it here
+    // See: https://github.com/flutter/flutter/issues/104219
+    exclude group: 'com.google.android.play'
 }
