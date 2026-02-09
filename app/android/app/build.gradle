@@ -54,7 +54,7 @@ android {
     buildTypes {
         release {
             shrinkResources false
-            minifyEnabled false
+            minifyEnabled true
 
             ndk {
                 debugSymbolLevel 'SYMBOL_TABLE'
@@ -80,11 +80,4 @@ dependencies {
 //    implementation "io.insert-koin:koin-core:$koin_version"
 //    implementation "io.insert-koin:koin-android:$koin_version"
 //    implementation "io.insert-koin:koin-android-compat:$koin_version"
-}
-
-configurations.implementation {
-    // Flutter is adding play framework by default x.x
-    // Remove it here
-    // See: https://github.com/flutter/flutter/issues/104219
-    exclude group: 'com.google.android.play'
 }
