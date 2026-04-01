@@ -86,7 +86,7 @@ jobs:
         run: |
           echo "$KEYSTORE" | base64 -d > release.jks
           
-          apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
+          APKSIGNER="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
           "$APKSIGNER" sign \
             --ks release.jks \
@@ -106,7 +106,7 @@ jobs:
         run: |
           echo "$KEYSTORE" | base64 -d > release.jks
           
-          apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
+          APKSIGNER="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
           "$APKSIGNER" sign \
             --ks release.jks \
@@ -126,7 +126,7 @@ jobs:
         run: |
           echo "$KEYSTORE" | base64 -d > release.jks
           
-          apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
+          APKSIGNER="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
           "$APKSIGNER" sign \
             --ks release.jks \
@@ -146,7 +146,7 @@ jobs:
         run: |
           echo "$KEYSTORE" | base64 -d > release.jks
           
-          apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
+          APKSIGNER="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
           "$APKSIGNER" sign \
             --ks release.jks \
