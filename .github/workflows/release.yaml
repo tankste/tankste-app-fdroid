@@ -77,7 +77,7 @@ jobs:
           KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
           KEYSTORE_ALIAS_PASSWORD: ${{ secrets.KEYSTORE_ALIAS_PASSWORD }}
         run: |
-          echo "${{ KEYSTORE }}" | base64 -d > release.jks
+          echo "$KEYSTORE" | base64 -d > release.jks
           
           apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
@@ -117,7 +117,7 @@ jobs:
           KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
           KEYSTORE_ALIAS_PASSWORD: ${{ secrets.KEYSTORE_ALIAS_PASSWORD }}
         run: |
-          echo "${{ KEYSTORE }}" | base64 -d > release.jks
+          echo "$KEYSTORE" | base64 -d > release.jks
           
           apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
@@ -137,7 +137,7 @@ jobs:
           KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
           KEYSTORE_ALIAS_PASSWORD: ${{ secrets.KEYSTORE_ALIAS_PASSWORD }}
         run: |
-          echo "${{ KEYSTORE }}" | base64 -d > release.jks
+          echo "$KEYSTORE" | base64 -d > release.jks
           
           apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
@@ -154,8 +154,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ $VERSION }}
-          release_name: ${{ $VERSION }}
+          tag_name: ${{ env.VERSION }}
+          release_name: ${{ env.VERSION }}
           draft: true
           prerelease: false
 
