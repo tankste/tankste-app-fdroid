@@ -97,7 +97,7 @@ jobs:
           KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
           KEYSTORE_ALIAS_PASSWORD: ${{ secrets.KEYSTORE_ALIAS_PASSWORD }}
         run: |
-          echo "${{ KEYSTORE }}" | base64 -d > release.jks
+          echo "$KEYSTORE" | base64 -d > release.jks
           
           apk_signer="$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner"
 
