@@ -93,10 +93,10 @@ jobs:
             --ks-pass env:KEYSTORE_PASSWORD \
             --ks-key-alias "$KEYSTORE_ALIAS" \
             --key-pass env:KEYSTORE_ALIAS_PASSWORD \
-            --out "app/build/app/outputs/flutter-apk/app-release.apk" \
+            --out "tankste-fdroid-${{ env.VERSION }}-universal.apk" \
             app/build/app/outputs/flutter-apk/app-release.apk
 
-      - name: Sign ARM v7 APK
+      - name: Sign ARM APK
         shell: bash
         env:
           KEYSTORE: ${{ secrets.KEYSTORE }}
@@ -113,10 +113,10 @@ jobs:
             --ks-pass env:KEYSTORE_PASSWORD \
             --ks-key-alias "$KEYSTORE_ALIAS" \
             --key-pass env:KEYSTORE_ALIAS_PASSWORD \
-            --out "app/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk" \
+            --out "tankste-fdroid-${{ env.VERSION }}-arm.apk" \
             app/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
 
-      - name: Sign ARM v8 APK
+      - name: Sign ARM 64 APK
         shell: bash
         env:
           KEYSTORE: ${{ secrets.KEYSTORE }}
@@ -133,7 +133,7 @@ jobs:
             --ks-pass env:KEYSTORE_PASSWORD \
             --ks-key-alias "$KEYSTORE_ALIAS" \
             --key-pass env:KEYSTORE_ALIAS_PASSWORD \
-            --out "app/build/app/outputs/flutter-apk/app-arm64-v8a-release.apk" \
+            --out "tankste-fdroid-${{ env.VERSION }}-arm64.apk" \
             app/build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
 
       - name: Sign ARM x86 APK
@@ -153,39 +153,16 @@ jobs:
             --ks-pass env:KEYSTORE_PASSWORD \
             --ks-key-alias "$KEYSTORE_ALIAS" \
             --key-pass env:KEYSTORE_ALIAS_PASSWORD \
-            --out "app/build/app/outputs/flutter-apk/app-x86_64-release.apk" \
+            --out "tankste-fdroid-${{ env.VERSION }}-x86_64.apk" \
             app/build/app/outputs/flutter-apk/app-x86_64-release.apk
 
-      - name: "Create release"
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.VERSION }}
-          release_name: ${{ env.VERSION }}
           draft: true
-          prerelease: false
-
-      - name: Upload universal APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: tankste-fdroid-$VERSION-universal.apk
-          path: app/build/app/outputs/flutter-apk/app-release.apk
-
-      - name: Upload ARM APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: tankste-fdroid-$VERSION-arm.apk
-          path: app/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
-
-      - name: Upload ARM64 APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: tankste-fdroid-$VERSION-arm64.apk
-          path: app/build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
-
-      - name: Upload x86 APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: tankste-fdroid-$VERSION-x86_64.apk
-          path: app/build/app/outputs/flutter-apk/app-x86_64-release.apk
+          files: |
+            tankste-fdroid-${{ env.VERSION }}-universal.apk
+            tankste-fdroid-${{ env.VERSION }}-arm.apk
+            tankste-fdroid-${{ env.VERSION }}-arm64.apk
+            tankste-fdroid-${{ env.VERSION }}-x86_64.apk
