@@ -2,8 +2,8 @@ name: report
 publish_to: none
 
 environment:
-  sdk: 3.10.4
-  flutter: 3.38.5
+  sdk: 3.12.2
+  flutter: 3.44.2
 
 dependencies:
   flutter:
@@ -25,7 +25,7 @@ dependencies:
   http: ^1.6.0
 
   # Multiple Result - https://pub.dev/packages/multiple_result
-  multiple_result: ^5.2.0
+  multiple_result: ^5.3.0
 
   # Intl - https://pub.dev/packages/intl
   intl: ^0.20.2

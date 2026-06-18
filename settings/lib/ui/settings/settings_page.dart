@@ -58,7 +58,7 @@ class SettingsPage extends StatelessWidget {
               _openUrl("https://github.com/tankste/app");
             },
             minLeadingWidth: 8,
-            leading: const Icon(FontAwesomeIcons.github),
+            leading: const FaIcon(FontAwesomeIcons.github),
             title: Text(tr('settings.open_source.source_code.title')),
             subtitle: Text(tr('settings.open_source.source_code.description'))),
       ]),
@@ -84,7 +84,7 @@ class SettingsPage extends StatelessWidget {
               _openUrl("https://www.instagram.com/tankste.app");
             },
             minLeadingWidth: 8,
-            leading: const Icon(FontAwesomeIcons.instagram),
+            leading: const FaIcon(FontAwesomeIcons.instagram),
             title: Text(tr('settings.contact.instagram.title')),
             subtitle: Text(tr('settings.contact.instagram.description'))),
         ListTile(
@@ -92,7 +92,7 @@ class SettingsPage extends StatelessWidget {
               _openUrl("https://twitter.com/tankste_app");
             },
             minLeadingWidth: 8,
-            leading: const Icon(FontAwesomeIcons.twitter),
+            leading: const FaIcon(FontAwesomeIcons.twitter),
             title: Text(tr('settings.contact.twitter.title')),
             subtitle: Text(tr('settings.contact.twitter.description')))
       ]),

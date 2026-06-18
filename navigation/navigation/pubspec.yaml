@@ -2,8 +2,8 @@ name: navigation
 publish_to: none
 
 environment:
-  sdk: 3.10.4
-  flutter: 3.38.5
+  sdk: 3.12.2
+  flutter: 3.44.2
 
 dependencies:
   flutter:
@@ -31,7 +31,7 @@ dependencies:
   flutter_bloc: ^9.1.1
 
   # Map launcher - https://pub.dev/packages/map_launcher
-  map_launcher: ^4.4.2
+  map_launcher: ^4.5.0
 
   # URL Launcher - https://pub.dev/packages/url_launcher
   url_launcher: ^6.3.2

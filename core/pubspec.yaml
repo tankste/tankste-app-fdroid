@@ -2,8 +2,8 @@ name: core
 publish_to: none
 
 environment:
-  sdk: 3.10.4
-  flutter: 3.38.5
+  sdk: 3.12.2
+  flutter: 3.44.2
 
 dependencies:
   flutter:
@@ -13,25 +13,25 @@ dependencies:
     path: '../settings'
 
   # Package Info - https://pub.dev/packages/package_info_plus
-  package_info_plus: ^9.0.0
+  package_info_plus: ^10.1.0
 
   # Tuple - https://pub.dev/packages/tuple
   tuple: ^2.0.2
 
   # Multiple Result - https://pub.dev/packages/multiple_result
-  multiple_result: ^5.2.0
+  multiple_result: ^5.3.0
 
   # Shared Preferences - https://pub.dev/packages/shared_preferences
-  shared_preferences: ^2.5.4
+  shared_preferences: ^2.5.5
 
   # UUID - https://pub.dev/packages/uuid
-  uuid: ^4.5.2
+  uuid: ^4.5.3
 
   # Logger - https://pub.dev/packages/logger
-  logger: ^2.6.2
+  logger: ^2.7.0
 
   # Path Provider - https://pub.dev/packages/path_provider
-  path_provider: ^2.1.5
+  path_provider: ^2.1.6
 
 dev_dependencies:
   flutter_lints: ^6.0.0

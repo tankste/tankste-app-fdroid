@@ -2,8 +2,8 @@ name: location_core
 publish_to: none
 
 environment:
-  sdk: 3.10.4
-  flutter: 3.38.5
+  sdk: 3.12.2
+  flutter: 3.44.2
 
 dependencies:
   flutter:
@@ -16,10 +16,10 @@ dependencies:
     path: '../../navigation/core'
 
   # Multiple Result - https://pub.dev/packages/multiple_result
-  multiple_result: ^5.2.0
+  multiple_result: ^5.3.0
 
   # Shared Preferences - https://pub.dev/packages/shared_preferences
-  shared_preferences: ^2.5.4
+  shared_preferences: ^2.5.5
 
 dev_dependencies:
   flutter_lints: ^6.0.0

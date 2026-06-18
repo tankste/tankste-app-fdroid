@@ -55,7 +55,7 @@ class DeveloperCard extends StatelessWidget {
                     builder: (context) => const FeatureSettingsPage()));
           },
           minLeadingWidth: 8,
-          leading: const Icon(FontAwesomeIcons.wandMagicSparkles),
+          leading: const FaIcon(FontAwesomeIcons.wandMagicSparkles),
           title: Text(tr('settings.developer.feature_flags.title')),
           subtitle: Text(tr('settings.developer.feature_flags.description')),
         ),

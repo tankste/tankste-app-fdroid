@@ -2,8 +2,8 @@ name: map_maplibre
 publish_to: none
 
 environment:
-  sdk: 3.10.4
-  flutter: 3.38.5
+  sdk: 3.12.2
+  flutter: 3.44.2
 
 dependencies:
   flutter:
@@ -16,10 +16,10 @@ dependencies:
     path: '../core'
 
   # MapLibre - https://github.com/maplibre/flutter-maplibre-gl
-  maplibre_gl: ^0.24.1
+  maplibre_gl: ^0.26.1
 
   # Multiple Result - https://pub.dev/packages/multiple_result
-  multiple_result: ^5.2.0
+  multiple_result: ^5.3.0
 
 dev_dependencies:
   flutter_lints: ^6.0.0
