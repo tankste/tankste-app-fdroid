@@ -9,7 +9,14 @@ CHANGELOG
 
 ## Upcoming version ##
 
-## 2.2.1 (2026-02-05) ##
+## 2.2.2 (2026-09-04) ##
+
+- 🌟 Allow to configure default service URLs
+- 🧹 Replace Google's route calculation with Valhalla
+- 🐞 Use Google Maps only on Android platforms as default map ([#91](https://github.com/tankste/app/issues/91)) 
+- 🧹 Add `nextGenerationMarkers` feature flag ([#92](https://github.com/tankste/app/issues/92)) 
+
+## 2.2.1 (2026-03-02) ##
 
 - 🌟 Create review package with closed & floss variants
 - 🌟 Create location package with closed & floss variants

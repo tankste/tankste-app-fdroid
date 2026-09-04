@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:settings/ui/configuration/ui/item/configuration_item.dart';
 import 'package:settings/ui/currency/currency_item.dart';
 import 'package:settings/ui/developer/developer_card.dart';
 import 'package:settings/ui/map/map_provider_item.dart';
@@ -39,7 +40,8 @@ class SettingsPage extends StatelessWidget {
         ThemeItem(),
         MapProviderItem(),
         MapDestinationItem(),
-        CurrencyItem()
+        CurrencyItem(),
+        ConfigurationItem(),
       ]),
       SettingsCard(title: tr('settings.open_source.title'), items: [
         SponsorSettingItem(),
@@ -58,7 +60,7 @@ class SettingsPage extends StatelessWidget {
               _openUrl("https://github.com/tankste/tankste-app-fdroid");
             },
             minLeadingWidth: 8,
-            leading: const Icon(FontAwesomeIcons.github),
+            leading: const FaIcon(FontAwesomeIcons.github),
             title: Text(tr('settings.open_source.source_code.title')),
             subtitle: Text(tr('settings.open_source.source_code.description'))),
       ]),
@@ -84,7 +86,7 @@ class SettingsPage extends StatelessWidget {
               _openUrl("https://www.instagram.com/tankste.app");
             },
             minLeadingWidth: 8,
-            leading: const Icon(FontAwesomeIcons.instagram),
+            leading: const FaIcon(FontAwesomeIcons.instagram),
             title: Text(tr('settings.contact.instagram.title')),
             subtitle: Text(tr('settings.contact.instagram.description'))),
         ListTile(
@@ -92,7 +94,7 @@ class SettingsPage extends StatelessWidget {
               _openUrl("https://twitter.com/tankste_app");
             },
             minLeadingWidth: 8,
-            leading: const Icon(FontAwesomeIcons.twitter),
+            leading: const FaIcon(FontAwesomeIcons.twitter),
             title: Text(tr('settings.contact.twitter.title')),
             subtitle: Text(tr('settings.contact.twitter.description')))
       ]),

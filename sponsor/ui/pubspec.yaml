@@ -2,8 +2,8 @@ name: sponsor_ui
 publish_to: none
 
 environment:
-  sdk: 3.10.4
-  flutter: 3.38.5
+  sdk: 3.12.2
+  flutter: 3.44.2
 
 dependencies:
   flutter:
@@ -22,7 +22,7 @@ dependencies:
   flutter_bloc: ^9.1.1
 
   # Multiple Result - https://pub.dev/packages/multiple_result
-  multiple_result: ^5.2.0
+  multiple_result: ^5.3.0
 
   # URL Launcher - https://pub.dev/packages/url_launcher
   url_launcher: ^6.3.2
