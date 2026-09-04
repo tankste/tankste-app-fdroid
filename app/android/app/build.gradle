@@ -33,10 +33,6 @@ android {
     compileSdkVersion 36
     ndkVersion '28.1.13356709'
 
-    packagingOptions {
-        doNotStrip '**/*.so'
-    }
-
     aaptOptions {
         cruncherEnabled = false
     }
