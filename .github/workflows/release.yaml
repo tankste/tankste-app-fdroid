@@ -50,21 +50,15 @@ jobs:
         run: |
           echo "PUB_CACHE=$(pwd)/.pub-cache" >> "$GITHUB_ENV"
 
-      - name: Define local.properties
-        working-directory: app/
-        run: |
-          echo "flutter.sdk=${{ env.FLUTTER_ROOT }}" >> ./local.properties
-          
-
       - name: Configure Flutter
         working-directory: app/
         run: |
           flutter config --no-analytics
 
-      - name: Precache Flutter
+      - name: Enforce lock file
         working-directory: app/
         run: |
-          flutter precache --android
+          flutter pub get --enforce-lockfile
 
       - name: "Build universal app"
         working-directory: app/
