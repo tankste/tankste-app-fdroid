@@ -23,3 +23,5 @@ sed -i '' 's/apple_closed/apple_foss/g' map/map/pubspec.yaml
 sed -i '' '/^pub_get map\/google_closed/d' get-deps.sh
 sed -i '' '/^pub_get map\/apple_closed$/d' get-deps.sh
 
+# iOS
+rm -R app/ios

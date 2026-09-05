@@ -16,7 +16,7 @@ dependencies:
     path: '../core'
 
   # MapLibre - https://github.com/maplibre/flutter-maplibre-gl
-  maplibre_gl: ^0.25.0
+  maplibre_gl: ^0.26.1
 
   # Multiple Result - https://pub.dev/packages/multiple_result
   multiple_result: ^5.3.0
